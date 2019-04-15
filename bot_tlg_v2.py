@@ -1,11 +1,12 @@
-token="843678390:AAHGey2kE0Bj-EyLn-CHPCQfk8ehxjTw5fA"
+#token="843678390:AAHGey2kE0Bj-EyLn-CHPCQfk8ehxjTw5fA"
 
 
 
 # -*- coding: utf-8 -*-
 import telebot
+import os
 
-
+token = os.environ['TELEGRAM_TOKEN']
 bot = telebot.TeleBot(token)
 @bot.message_handler(content_types=["text"])
 def handle_text(message):
